@@ -12,7 +12,7 @@ for row in rows:
         counter = counter + 1
 print(counter)
 
-
+#part 2
 rowList = []
 for row in rows:
     thisRow = row.split()
