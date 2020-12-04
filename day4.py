@@ -1,3 +1,5 @@
+# DOESN'T WORK! I ended up using a shell script. Thank you for the help anons.
+
 import re
 
 file = open("./day4.txt", mode="r")
