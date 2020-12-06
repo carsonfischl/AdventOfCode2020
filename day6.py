@@ -11,10 +11,10 @@ for row in rows:
     row = row.split('\n')
     rowList.append(row)
 
-for group in rowList:
+for group in rowList: #iterate over every passenger group
     thisGroup = Counter(string.ascii_lowercase)
-    for passenger in group:
-        thisGroup &= Counter(passenger)
+    for passenger in group: 
+        thisGroup &= Counter(passenger) #go over every passenger, AND with the alphabet
     print(thisGroup)
     print(len(thisGroup))
     print(len(group))
