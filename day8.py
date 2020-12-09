@@ -172,15 +172,18 @@ totalCount = Counter()
 badLines = list() # the second last member in this list *should* be the correct value
 
 while j <= int(len(lines)):
+    print(accumulator) # this is still going to give an "index out of bounds" error but the final number printed will be the correct answer
     line = lines[int(j)].split()
     if lines[int(j)].startswith("nop"):
         if lines[int(j)] not in badLines:
+            print("added new nop")
             badLines.append(lines[int(j)])
         print("nopped: " + lines[int(j)])
         j += 1
         print(badLines)
     elif lines[int(j)].startswith("jmp"):
         if lines[int(j)] not in badLines:
+            print("added new jmp")
             badLines.append(lines[int(j)])
         print("jumped: " + line[1])
         x = re.findall(r'\d+', line[1])
@@ -191,7 +194,7 @@ while j <= int(len(lines)):
         j = nsp.eval(thisStr)
         print(badLines)
     elif lines[int(j)].startswith("acc"):
-        print("accumulated: " + line[1])
+#         print("accumulated: " + line[1])
         x = re.findall(r'\d+', line[1])
         oper = list(line[1])
         oper = oper[0]
@@ -203,4 +206,3 @@ while j <= int(len(lines)):
         break
 
 print(accumulator)
-
