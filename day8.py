@@ -169,10 +169,10 @@ totalCount = Counter()
 # print(accumulator)
 
 # part 2
-badLines = list() # the second last member in this list *should* be the correct value
+badLines = list() # the second last member in this list *should* be the correct value (the index can change depending on the number of repeat values in your loop; jmp -309 for me
 
 while j <= int(len(lines)):
-    print(accumulator) # this is still going to give an "index out of bounds" error but the final number printed will be the correct answer
+    print(accumulator) # this is still going to give an "index out of bounds" error but the final number printed will be the correct answer once you change the above
     line = lines[int(j)].split()
     if lines[int(j)].startswith("nop"):
         if lines[int(j)] not in badLines:
